@@ -3,7 +3,7 @@
 RELEASE="3.4.6"
 
 if [ "$LIBFAAC" = "true" ]; then
-    FAACOPTIONS="--enable-nonfree --enable-libx264"
+    FAACOPTIONS="--enable-nonfree --enable-libx264 --enable-libx265"
 else
     FAACOPTIONS="--disable-libx264"
 fi
@@ -25,7 +25,7 @@ pushd ffmpeg-$RELEASE
     --enable-libopencore-amrwb --enable-libtheora --enable-libvorbis \
     --enable-libvpx $FAACOPTIONS --enable-static --enable-version3 \
     --extra-libs="-ldl -static" --extra-cflags="--static" \
-    --enable-libfreetype --enable-ffplay --enable-libxvid --enable-hardcoded-tables \
+    --enable-ffplay --enable-libxvid --enable-hardcoded-tables \
     --disable-ffserver --disable-network --disable-shared    
 
     
