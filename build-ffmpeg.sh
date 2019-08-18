@@ -1,6 +1,6 @@
 #!/bin/bash -e
 # Currently we support ffmpeg 2.x-3.x
-RELEASE="3.4.2"
+RELEASE="3.4.6"
 
 if [ "$LIBFAAC" = "true" ]; then
     FAACOPTIONS="--enable-nonfree --enable-libx264"
@@ -29,9 +29,9 @@ pushd ffmpeg-$RELEASE
     
 make
 echo "ffmpeg - Nuxeo version" > description-pak
-checkinstall --pkgname=ffmpeg-nuxeo --pkgversion="$RELEASE" \
+checkinstall --pkgname=nco-ffmpeg --pkgversion="$RELEASE" \
     --conflicts=ffmpeg,libav-tools --replaces=ffmpeg,libav-tools \
-    --provides=ffmpeg --maintainer="'Nuxeo Packagers <packagers@nuxeo.com>'" \
+    --provides=ffmpeg --maintainer="'Nuxeo Cloud <nco@nuxeo.com>'" \
     --backup=no --deldoc=yes --deldesc=yes --fstrans=no --default
 popd
 
