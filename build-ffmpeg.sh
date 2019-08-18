@@ -29,7 +29,7 @@ pushd ffmpeg-$RELEASE
     
 make
 echo "ffmpeg - Nuxeo version" > description-pak
-checkinstall --pkgname=nco-ffmpeg --pkgversion="$RELEASE" \
+checkinstall --pkgname=ffmpeg-nco --pkgversion="$RELEASE" \
     --conflicts=ffmpeg,libav-tools --replaces=ffmpeg,libav-tools \
     --provides=ffmpeg --maintainer="'Nuxeo Cloud <nco@nuxeo.com>'" \
     --backup=no --deldoc=yes --deldesc=yes --fstrans=no --default
