@@ -3,7 +3,7 @@
 RELEASE="3.4.6"
 
 if [ "$LIBFAAC" = "true" ]; then
-    FAACOPTIONS="--enable-nonfree --enable-libx264 --enable-libx265"
+    FAACOPTIONS="--enable-nonfree --enable-libx264"
 else
     FAACOPTIONS="--disable-libx264"
 fi
